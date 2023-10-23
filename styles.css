@@ -1,0 +1,115 @@
+@import url('https://fonts.cdnfonts.com/css/cooper-hewitt');
+
+*{
+    font-family: 'Cooper Hewitt', sans-serif;
+    padding:0;
+    margin: 0;
+}
+
+
+/* NAV */
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color:white;
+    height: 10vh;
+    margin: 1em;
+    
+
+}
+
+.menu ul{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    
+    list-style: none;
+}
+
+.menu ul a{
+
+    text-decoration: none;
+
+}
+
+#logo{
+    width: 10%;
+    height:100%;
+
+    background-image: url(/images/java\ \(2\).png);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;  
+    
+}
+
+.btn{
+    height: 50%;
+    width: 10%;
+    color: blue;
+    background: linear-gradient(to right, white, rgba(84, 84, 251, 0.586));
+    border: solid blue 1px;
+    font-size: 1.3em;
+    font-weight: 900;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 1s, height 1s;
+   
+}
+
+
+
+.btn:hover{
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.142);
+    height: 55%;
+    width: 12%;
+    
+    
+}
+
+
+/* SECCIONES */
+
+section{
+    height: 90vh;
+    width: 60vw;
+    margin: auto;
+    
+
+}
+
+#index{
+
+    background-image: url(/images/java-logo.png);
+    
+    background-position:center right;
+    background-repeat:no-repeat;  
+    background-size: 50em;
+}
+
+#index h1{
+    margin-top: 3em;
+    color: blue;
+    font-size: 4em;
+    font-weight: 900;
+}
+
+#index p{
+    color: rgb(73, 73, 245);
+    font-size: 2em;
+}
+
+#index p span{
+    color: rgba(238, 54, 54, 0.938);
+    font-size: 0.5em;
+    font-weight: 900;
+}
+    

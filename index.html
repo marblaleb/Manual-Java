@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Installation Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<header>
+    <nav class="menu">
+        <ul>
+            <li id="logo"><a href="logo"></a></li>
+            <li id="init_tomcat" class="btn"><a href="#Tomcat">Tomcat</a></li>
+            <li id="init_glassfish" class="btn"><a href="#Glassfish">Glassfish</a></li>
+            <li id="init_wildfly" class="btn"><a href="#Wildfly">Wildfly</a></li>
+            <li id="faq" class="btn"><a href="#faq"><span>faq</span></a></li>
+        </ul>
+    </nav>
+
+
+</header>
+
+<body>
+    <section id="index">
+
+        <h1>Instalación de Java <br>en Servidores Web</h1>
+        <p>Aprende a instalar Java EE y otros servicios en los servidores web más usados</p>
+        <p> <span>A GUIDE BY MARCO A. BLANCO</span>            </p>
+
+    </section>
+
+
+
+    <section id="Tomcat">
+        <h1>Instalación y configuración en TOMCAT SERVER</h1>
+        <h2>Versión en Ubuntu</h2>
+
+        <ol class="listatom">
+            <li>Descarga de Apache Tomcat: <br>
+
+                Visita el sitio oficial de Apache Tomcat en https://tomcat.apache.org/. <br>
+                En la sección "Download" elige la versión de Tomcat que desees y descarga el archivo binario (archivo
+                .tar.gz).</li>
+            <li>
+                Instalación en Ubuntu: <br>
+
+                Abre una terminal. <br>
+                Navega al directorio donde descargaste el archivo Tomcat. <br>
+                Descomprime el archivo con el siguiente comando: <br>
+
+                <span class="code">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
+
+                <br>
+
+                Mueve la carpeta de Tomcat al directorio deseado: <br>
+
+                <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
+
+                
+
+
+            </li>
+            <li>Configuración:
+
+                Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
+               
+                sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh <br>
+                Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
+
+                <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span>
+                
+                
+
+                Iniciar Apache Tomcat: <br>
+
+                Desde la terminal, ejecuta el siguiente comando: <br>
+
+                <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
+                
+                </li>
+            <li>
+                
+                Desde la terminal, ejecuta el siguiente comando: <br>
+             
+                <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
+
+
+            </li>
+            <li>
+                Abre un navegador web y accede a http://localhost:8080 para el panel de administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
+            </li>
+        </ol>
+
+
+    </section>
+
+
+
+    <section id="Glassfish">
+
+
+
+    </section>
+
+
+    <section id="Wildfly">
+
+
+
+
+    </section>
+
+    <section id="Faq">
+
+    </section>
+
+
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
