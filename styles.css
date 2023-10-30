@@ -4,6 +4,8 @@
     font-family: 'Cooper Hewitt', sans-serif;
     padding:0;
     margin: 0;
+    scroll-behavior:smooth;
+    
 }
 
 
@@ -31,6 +33,16 @@
 
     
     list-style: none;
+}
+
+
+.menu ul li{
+
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.142);
+}
+
+.menu ul li:nth-of-type(1){
+    box-shadow: none;
 }
 
 .menu ul a{
@@ -89,15 +101,22 @@ section{
 
 #index{
 
-    width:90vw;    
+    width:60vw; 
+    height: 70vh;   
 
 
     background-image: url(/images/java-logo.png);
     
-    background-position:center center;
+    background-position:center right;
     background-repeat:no-repeat;  
     background-size: 30%;
-    margin-left: 5vw;
+    letter-spacing: 0.7em;
+    
+    margin-top: 6em;
+    margin-left: 17vw;
+    margin-bottom: 0;
+    margin-right: 0;
+    
     
 }
 
@@ -158,4 +177,75 @@ section:nth-of-type(2){
     color: blue
 
 }
+
+
+.listatom{
+    list-style-type: none;
+    
+    font-size: 1.5em;
+    word-spacing: 0.2em;
+
+    margin-top: 3em;
+    margin-left: 20em;
+    counter-increment: name;
+
+}
+
+.listatom li{
+    counter-increment: detail-counter;
+    margin: 1.5em;
+    border-bottom: dashed black 0.1em;
+    padding: 0.3em;
+}
+
+
+
+
+.listatom li::before{
+    content:counter(detail-counter);
+    
+    
+    margin-right: 2em;
+    float: left;
+    font-weight: 900;
+    
+    background-color: #C6C4F7;
+    color: blue;
+    border-radius: 0.3em;
+    
+    padding: 0.4em 0.6em 0.4em 0.6em;
+
+
+}
+
+.imagen-tom{
+    float: left;
+    width: 10vw;
+    height: 15vh;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    background-color: #C6C4F7;
+    border-radius: 0.3em;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+/* ANIMACIONES */
+
+
+
+.rotate-scale-down-horizontal:hover{
+    animation:rotate-scale-down-horizontal 0.4s linear both;
+}
+
+
+@keyframes rotate-scale-down-horizontal{
+    0%{transform:scale(1) rotateX(0)}
+    50%{transform:scale(.5) rotateX(-180deg)}
+    100%{transform:scale(1) rotateX(-360deg)}}
     
