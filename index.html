@@ -61,25 +61,29 @@
 
 
             </li>
-            <li>Configuración:
+            <li><span class="init">Configuración: </span> <br>
 
                 Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
+
+                <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
                
-                sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh <br>
+                
                 Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
 
-                <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span>
+                <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
                 
                 
 
-                Iniciar Apache Tomcat: <br>
-
-                Desde la terminal, ejecuta el siguiente comando: <br>
-
-                <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
+                
                 
                 </li>
             <li>
+
+                <span class="init">Iniciar Apache Tomcat: </span> <br>
+
+                Desde la terminal, ejecuta el siguiente comando: <br>
+
+                <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
                 
                 Desde la terminal, ejecuta el siguiente comando: <br>
              
@@ -88,12 +92,82 @@
 
             </li>
             <li>
-                Abre un navegador web y accede a http://localhost:8080 para el panel de administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
+                <span class="init">Abre un navegador web </span>y accede a http://localhost:8080 para el panel de administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
             </li>
         </ol>
 
 
     </section>
+
+</section>
+
+
+
+<section id="Tomcat">
+    <h1> &nbsp Instalación y configuración en TOMCAT SERVER <br>Versión en Ubuntu</h1>
+    <img  class="rotate-scale-down-horizontal imagen-tom" src="./images/Apache_Tomcat_logo.svg.png" alt="">
+    
+
+    <ol class="listatom">
+        <li><span class="init">Descarga de Apache Tomcat: </span> <br>
+
+            Visita el sitio oficial de Apache Tomcat en <b>https://tomcat.apache.org/</b> <br>
+            En la sección "Download" elige la versión de Tomcat que desees y descarga el archivo binario (archivo
+            .tar.gz).</li>
+        <li>
+             <span class="init">Instalación en Ubuntu: </span><br>
+
+            Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con el siguiente comando: <br>
+
+            <span class="code">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
+
+            <br>
+
+            Mueve la carpeta de Tomcat al directorio deseado: <br>
+
+            <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
+
+            
+
+
+        </li>
+        <li><span class="init">Configuración: </span> <br>
+
+            Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
+
+            <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
+           
+            
+            Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
+
+            <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
+            
+            
+
+            
+            
+            </li>
+        <li>
+
+            <span class="init">Iniciar Apache Tomcat: </span> <br>
+
+            Desde la terminal, ejecuta el siguiente comando: <br>
+
+            <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
+            
+            Desde la terminal, ejecuta el siguiente comando: <br>
+         
+            <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
+
+
+        </li>
+        <li>
+            <span class="init">Abre un navegador web </span>y accede a http://localhost:8080 para el panel de administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
+        </li>
+    </ol>
+
+
+</section>
 
 
 
