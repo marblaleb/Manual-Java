@@ -92,7 +92,7 @@
 /* SECCIONES */
 
 section{
-    height: 90vh;
+    height: 180vh;
     width: 90vw;
     margin: 0;
     
@@ -140,6 +140,22 @@ section{
     color: rgba(238, 54, 54, 0.938);
     font-size: 0.5em;
     font-weight: 900;
+}
+
+.init {
+    color: blue;;
+    font-weight: 900;
+}
+
+.code{
+    font-style:normal;
+    font-weight: 700;
+    display: inline-block;
+    background-color: #C6C4F7;
+    color: white;
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5em;
 }
 
 
@@ -239,7 +255,7 @@ section:nth-of-type(2){
 
 
 
-.rotate-scale-down-horizontal:hover{
+.rotate-scale-down-horizontal:active{
     animation:rotate-scale-down-horizontal 0.4s linear both;
 }
 
