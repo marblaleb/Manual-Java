@@ -24,17 +24,23 @@
 
 <body>
 
-    <div class="verticalmenu">
-        <a href="#"></a>
-        <a href="#Tomcat"></a>
-        <a href="#Glassfish"></a>
-        <a href="#Wildfly"></a>
-    </div>
+    <div class="menu-wrap">
+        <div class="menu2">
+          <span>Tomcat</span>
+          <span>Glassfish</span>
+          <span>Wildfly</span>
+          <span>Faq</span>
+        </div>
+     </div>
+
+
+
+
     <section id="index">
 
-        <h1>Instalación de Java <br>en Servidores Web</h1>
-        <p>Aprende a instalar Java EE y otros servicios <br> en los servidores web más usados</p>
-        <p> <span>A GUIDE BY MARCO A. BLANCO</span>            </p>
+        <p class="parte1">Instalación de Java </p><p class="parte12">en Servidores Web</p>
+        <p class="parte2">Aprende a instalar <br> Java EE  y <br> otros servicios <br> en los servidores web <br> más usados</p>
+        <p class="parte3"> A GUIDE BY MARCO A. BLANCO  </p>        
 
     </section>
 
@@ -110,44 +116,60 @@
 
 
 
-<section id="Tomcat">
-    <h1> &nbsp Instalación y configuración en TOMCAT SERVER <br>Versión en Ubuntu</h1>
-    <img  class="rotate-scale-down-horizontal imagen-tom" src="./images/Apache_Tomcat_logo.svg.png" alt="">
+<section id="Glassfish">
+    <h1> &nbsp Instalación y configuración en GLASSFISH SERVER <br>Versión en Ubuntu</h1>
+    <img  class="rotate-scale-down-horizontal imagen-tom" src="./images/javaee_glassfish_logo_icon_170554.png" alt="">
     
 
     <ol class="listatom">
-        <li><span class="init">Descarga de Apache Tomcat: </span> <br>
+        <li><span class="init">Descarga de Glassfish server: </span> <br>
 
-            Visita el sitio oficial de Apache Tomcat en <b>https://tomcat.apache.org/</b> <br>
-            En la sección "Download" elige la versión de Tomcat que desees y descarga el archivo binario (archivo
-            .tar.gz).</li>
-        <li>
-             <span class="init">Instalación en Ubuntu: </span><br>
+            Visita el sitio oficial de GlassFish para obtener la última versión, descarga el archivo ZIP del GlassFish Server.
+            Abre la terminal en Ubuntu y escribe los siguientes comandos: <br>
 
-            Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con el siguiente comando: <br>
-
-            <span class="code">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
-
-            <br>
-
-            Mueve la carpeta de Tomcat al directorio deseado: <br>
-
-            <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
-
-            
+            <p><span class="code">cd /ruta/a/tu/descarga</span></p>
+            <p><span class="code">unzip nombre_del_archivo.zip</span></p>
+            <p><span class="code">sudo mv glassfish* /opt/glassfish </span></p>
+                
+                
+               
+                
 
 
         </li>
-        <li><span class="init">Configuración: </span> <br>
+        <li>
+             <span class="init">Configuración: </span><br>
 
-            Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
+             Abre el archivo <span class="bold">.bashrc</span> o <span class="bold">.zshrc</span> en tu editor de texto favorito. <br>
 
-            <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
-           
+            <span class="code">nano ~/.bashrc </span>
+
+            <br>Agrega las siguientes líneas al final del archivo: <br>
+
+            <span class="code">export GLASSFISH_HOME=/opt/glassfish <br>
+                export PATH=$PATH:$GLASSFISH_HOME/bin</span>
+
+            <br>Guarda y cierra el archivo. Luego, recarga el archivo de configuración: <br>
+
+            <span class="code">source ~/.bashrc <br></span>
+
+            <br> En la terminal, ejecuta el siguiente comando para iniciar GlassFish: <br>
+
+            <span class="code">asadmin start-domain <br></span>            
+
+
+        </li>
+        <li><span class="init">Despliegue de una aplicación Java: </span> <br>
+
+            Crea un archivo .war de tu aplicación Java (por ejemplo, mi_aplicacion.war). <br>
+            Navega al directorio <span class="bold">autodeploy</span> de GlassFish: <br>
+
+            <span class="code">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
             
-            Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
+            
+            Copia tu archivo <span class="bold">.war</span> al directorio autodeploy. GlassFish detectará automáticamente la aplicación y la desplegará. <br>
 
-            <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
+            <span class="code">cp /ruta/a/tu/aplicacion.war .</span> <br>
             
             
 
@@ -156,21 +178,15 @@
             </li>
         <li>
 
-            <span class="init">Iniciar Apache Tomcat: </span> <br>
+            <span class="init">Acceso a la Consola de Administración </span> <br>
 
-            Desde la terminal, ejecuta el siguiente comando: <br>
+            Finalmente, abre tu navegador web, visita <span class="bold"> http://localhost:4848 </span> e ingresa tus credenciales <br>
 
-            <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
             
-            Desde la terminal, ejecuta el siguiente comando: <br>
-         
-            <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
 
 
         </li>
-        <li>
-            <span class="init">Abre un navegador web </span>y accede a http://localhost:8080 para el panel de administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
-        </li>
+        
     </ol>
 
 
@@ -178,23 +194,80 @@
 
 
 
-    <section id="Glassfish">
 
 
 
-    </section>
+<section id="Wildfly">
+
+    <h1> &nbsp Instalación y configuración en WILDFLY SERVER <br>Versión en Windows</h1>
+    <img  class="rotate-scale-down-horizontal imagen-tom" src="./images/wildfly_logo_icon_170787.png" alt="">
+    
+
+    <ol class="listatom">
+        <li><span class="init">Descarga de Wildfly server: </span> <br>
+
+            <p>Visita el sitio web oficial de WildFly en https://wildfly.org/downloads/.</p>
+            <p>En la sección de descargas, busca la versión más reciente y haz clic en el enlace de descarga.
+            <p>Selecciona la distribución ZIP para Windows.</p>         
+                
+        </li>
+
+        <li>
+             <p><span class="init">Configuración: </span></p>
+
+             
+
+             <p>Abre el <span class="bold">"Panel de control"</span>en Windows y ve a <span class="bold"> "Sistema y seguridad" > "Sistema".</span></p> <span class="bold"></span>
+             <p>Haz clic en <span class="bold">"Configuración avanzada del sistema"</span> y luego en <span class="bold">"Variables de entorno".</span></p>
+             <p>En "Variables del sistema", haz clic en "Nuevo" y agrega una nueva variable llamada JBOSS_HOME con la ruta de la carpeta donde descomprimiste WildFly (por ejemplo, <span class="bold">C:\ruta\a\wildfly-xx.xx.xx.Final).</span></p>
+             <p>Encuentra la variable Path en la sección de "Variables del sistema" y haz clic en "Editar". Agrega al final la siguiente entrada: <span class="bold">%JBOSS_HOME%\bin.</span>  </p>
 
 
-    <section id="Wildfly">
+        </li>
+        <li>
+            <p><span class="init">Iniciar Wildfly: </span> </p>
+
+           <p> Abre una nueva ventana de terminal (cmd) y navega a la carpeta bin dentro de la carpeta WildFly.</p>
+           <p>Ejecuta el siguiente comando para iniciar WildFly:</p>
+
+           <p> <span class="code">standalone.bat</span> </p>
+            
+            
+
+            
+            
+            </li>
+        <li>
+
+            <p><span class="init">Desplegar una aplicación Java: </span></p> 
+
+            <p>Crea o copia tu aplicación Java (un archivo WAR) en la carpeta <span class="bold">standalone/deployments</span> dentro de la carpeta WildFly.</p>
+            <p>WildFly detectará automáticamente la aplicación y la desplegará.</p>            
+
+
+        </li>
+        <li>
+
+            <p><span class="init">Acceder a la aplicación: </span></p> 
+
+            <p>¡Ya podrás acceder a tu aplicación escribiendo en tu navegador la url <span class="bold">http://localhost:8080/tu-aplicacion</span> 
+                e ingresando tus credenciales!</p>       
+
+
+        </li>
+        
+    </ol>
 
 
 
 
-    </section>
+</section>
 
-    <section id="Faq">
 
-    </section>
+
+<section id="Faq">
+
+</section>
 
 
 
