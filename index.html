@@ -15,7 +15,7 @@
             <li id="init_tomcat" class="btn"><a href="#Tomcat">Tomcat</a></li>
             <li id="init_glassfish" class="btn"><a href="#Glassfish">Glassfish</a></li>
             <li id="init_wildfly" class="btn"><a href="#Wildfly">Wildfly</a></li>
-            <li id="faq" class="btn"><a href="#faq"><span>faq</span></a></li>
+            <li id="init_faq" class="btn"><a href="#faq"><span>faq</span></a></li>
         </ul>
     </nav>
 
@@ -26,21 +26,23 @@
 
     <div class="menu-wrap">
         <div class="menu2">
-          <span><a href="#Tomcat">Tomcat</a></span>
-          <span><a href="#Glassfish">Glassfish</a></span>
-          <span><a href="#Wildfly">Wildfly</a></span>
-          <span><a href="#faq">Faq</a></span>
+            <span><a href="#Tomcat">Tomcat</a></span>
+            <span><a href="#Glassfish">Glassfish</a></span>
+            <span><a href="#Wildfly">Wildfly</a></span>
+            <span><a href="#faq">Faq</a></span>
         </div>
-     </div>
+    </div>
 
 
 
 
     <section id="index">
 
-        <p class="parte1">Instalación de Java </p><p class="parte12">en Servidores Web</p>
-        <p class="parte2">Aprende a instalar <br> Java EE  y <br> otros servicios <br> en los servidores web <br> más usados</p>
-        <p class="parte3"> A GUIDE BY MARCO A. BLANCO  </p>        
+        <p class="parte1">Instalación de Java </p>
+        <p class="parte12">en Servidores Web</p>
+        <p class="parte2">Aprende a instalar <br> Java EE y <br> otros servicios <br> en los servidores web <br> más
+            usados</p>
+        <p class="parte3"> A GUIDE BY MARCO A. BLANCO </p>
 
     </section>
 
@@ -48,8 +50,8 @@
 
     <section id="Tomcat">
         <h1> &nbsp Instalación y configuración en TOMCAT SERVER <br>Versión en Ubuntu</h1>
-        <img  class="trans imagen-tom" src="./images/Apache_Tomcat_logo.svg.png" alt="">
-        
+        <img class="trans imagen-tom" src="./images/Apache_Tomcat_logo.svg.png" alt="">
+
 
         <ol class="listatom">
             <li><span class="init">Descarga de Apache Tomcat: </span> <br>
@@ -58,9 +60,10 @@
                 En la sección "Download" elige la versión de Tomcat que desees y descarga el archivo binario (archivo
                 .tar.gz).</li>
             <li>
-                 <span class="init">Instalación en Ubuntu: </span><br>
+                <span class="init">Instalación en Ubuntu: </span><br>
 
-                Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con el siguiente comando: <br>
+                Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con
+                el siguiente comando: <br>
 
                 <span class="code">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
 
@@ -70,7 +73,7 @@
 
                 <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
 
-                
+
 
 
             </li>
@@ -79,17 +82,17 @@
                 Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
 
                 <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
-               
-                
+
+
                 Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
 
                 <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
-                
-                
 
-                
-                
-                </li>
+
+
+
+
+            </li>
             <li>
 
                 <span class="init">Iniciar Apache Tomcat: </span> <br>
@@ -97,183 +100,258 @@
                 Desde la terminal, ejecuta el siguiente comando: <br>
 
                 <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
-                
+
                 Desde la terminal, ejecuta el siguiente comando: <br>
-             
+
                 <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
 
 
             </li>
             <li>
-                <span class="init">Abre un navegador web </span>y accede a http://localhost:8080 para el panel de administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
+                <span class="init">Abre un navegador web </span>y accede a http://localhost:8080 para el panel de
+                administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
             </li>
         </ol>
 
 
     </section>
 
-</section>
+    </section>
 
 
 
-<section id="Glassfish">
-    <h1> &nbsp Instalación y configuración en GLASSFISH SERVER <br>Versión en Ubuntu</h1>
-    <img  class="trans imagen-tom" src="./images/javaee_glassfish_logo_icon_170554.png" alt="">
-    
-
-    <ol class="listatom">
-        <li><span class="init">Descarga de Glassfish server: </span> <br>
-
-            Visita el sitio oficial de GlassFish para obtener la última versión, descarga el archivo ZIP del GlassFish Server.
-            Abre la terminal en Ubuntu y escribe los siguientes comandos: <br>
-
-            <p><span class="code">cd /ruta/a/tu/descarga</span></p>
-            <p><span class="code">unzip nombre_del_archivo.zip</span></p>
-            <p><span class="code">sudo mv glassfish* /opt/glassfish </span></p>
-                
-                
-               
-                
+    <section id="Glassfish">
+        <h1> &nbsp Instalación y configuración en GLASSFISH SERVER <br>Versión en Ubuntu</h1>
+        <img class="trans imagen-tom" src="./images/javaee_glassfish_logo_icon_170554.png" alt="">
 
 
-        </li>
-        <li>
-             <span class="init">Configuración: </span><br>
+        <ol class="listatom">
+            <li><span class="init">Descarga de Glassfish server: </span> <br>
 
-             Abre el archivo <span class="bold">.bashrc</span> o <span class="bold">.zshrc</span> en tu editor de texto favorito. <br>
+                Visita el sitio oficial de GlassFish para obtener la última versión, descarga el archivo ZIP del
+                GlassFish Server.
+                Abre la terminal en Ubuntu y escribe los siguientes comandos: <br>
 
-            <span class="code">nano ~/.bashrc </span>
-
-            <br>Agrega las siguientes líneas al final del archivo: <br>
-
-            <span class="code">export GLASSFISH_HOME=/opt/glassfish <br>
-                export PATH=$PATH:$GLASSFISH_HOME/bin</span>
-
-            <br>Guarda y cierra el archivo. Luego, recarga el archivo de configuración: <br>
-
-            <span class="code">source ~/.bashrc <br></span>
-
-            <br> En la terminal, ejecuta el siguiente comando para iniciar GlassFish: <br>
-
-            <span class="code">asadmin start-domain <br></span>            
+                <p><span class="code">cd /ruta/a/tu/descarga</span></p>
+                <p><span class="code">unzip nombre_del_archivo.zip</span></p>
+                <p><span class="code">sudo mv glassfish* /opt/glassfish </span></p>
 
 
-        </li>
-        <li><span class="init">Despliegue de una aplicación Java: </span> <br>
 
-            Crea un archivo .war de tu aplicación Java (por ejemplo, mi_aplicacion.war). <br>
-            Navega al directorio <span class="bold">autodeploy</span> de GlassFish: <br>
 
-            <span class="code">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
-            
-            
-            Copia tu archivo <span class="bold">.war</span> al directorio autodeploy. GlassFish detectará automáticamente la aplicación y la desplegará. <br>
 
-            <span class="code">cp /ruta/a/tu/aplicacion.war .</span> <br>
-            
-            
 
-            
-            
             </li>
-        <li>
+            <li>
+                <span class="init">Configuración: </span><br>
 
-            <span class="init">Acceso a la Consola de Administración </span> <br>
+                Abre el archivo <span class="bold">.bashrc</span> o <span class="bold">.zshrc</span> en tu editor de
+                texto favorito. <br>
 
-            Finalmente, abre tu navegador web, visita <span class="bold"> http://localhost:4848 </span> e ingresa tus credenciales <br>
+                <span class="code">nano ~/.bashrc </span>
 
-            
+                <br>Agrega las siguientes líneas al final del archivo: <br>
 
+                <span class="code">export GLASSFISH_HOME=/opt/glassfish <br>
+                    export PATH=$PATH:$GLASSFISH_HOME/bin</span>
 
-        </li>
-        
-    </ol>
+                <br>Guarda y cierra el archivo. Luego, recarga el archivo de configuración: <br>
 
+                <span class="code">source ~/.bashrc <br></span>
 
-</section>
+                <br> En la terminal, ejecuta el siguiente comando para iniciar GlassFish: <br>
 
-
-
-
-
-
-<section id="Wildfly">
-
-    <h1> &nbsp Instalación y configuración en WILDFLY SERVER <br>Versión en Windows</h1>
-    <img  class="trans imagen-tom" src="./images/wildfly_logo_icon_170787.png" alt="">
-    
-
-    <ol class="listatom">
-        <li><span class="init">Descarga de Wildfly server: </span> <br>
-
-            <p>Visita el sitio web oficial de WildFly en https://wildfly.org/downloads/.</p>
-            <p>En la sección de descargas, busca la versión más reciente y haz clic en el enlace de descarga.
-            <p>Selecciona la distribución ZIP para Windows.</p>         
-                
-        </li>
-
-        <li>
-             <p><span class="init">Configuración: </span></p>
-
-             
-
-             <p>Abre el <span class="bold">"Panel de control"</span>en Windows y ve a <span class="bold"> "Sistema y seguridad" > "Sistema".</span></p> <span class="bold"></span>
-             <p>Haz clic en <span class="bold">"Configuración avanzada del sistema"</span> y luego en <span class="bold">"Variables de entorno".</span></p>
-             <p>En "Variables del sistema", haz clic en "Nuevo" y agrega una nueva variable llamada JBOSS_HOME con la ruta de la carpeta donde descomprimiste WildFly (por ejemplo, <span class="bold">C:\ruta\a\wildfly-xx.xx.xx.Final).</span></p>
-             <p>Encuentra la variable Path en la sección de "Variables del sistema" y haz clic en "Editar". Agrega al final la siguiente entrada: <span class="bold">%JBOSS_HOME%\bin.</span>  </p>
+                <span class="code">asadmin start-domain <br></span>
 
 
-        </li>
-        <li>
-            <p><span class="init">Iniciar Wildfly: </span> </p>
-
-           <p> Abre una nueva ventana de terminal (cmd) y navega a la carpeta bin dentro de la carpeta WildFly.</p>
-           <p>Ejecuta el siguiente comando para iniciar WildFly:</p>
-
-           <p> <span class="code">standalone.bat</span> </p>
-            
-            
-
-            
-            
             </li>
-        <li>
+            <li><span class="init">Despliegue de una aplicación Java: </span> <br>
 
-            <p><span class="init">Desplegar una aplicación Java: </span></p> 
+                Crea un archivo .war de tu aplicación Java (por ejemplo, mi_aplicacion.war). <br>
+                Navega al directorio <span class="bold">autodeploy</span> de GlassFish: <br>
 
-            <p>Crea o copia tu aplicación Java (un archivo WAR) en la carpeta <span class="bold">standalone/deployments</span> dentro de la carpeta WildFly.</p>
-            <p>WildFly detectará automáticamente la aplicación y la desplegará.</p>            
-
-
-        </li>
-        <li>
-
-            <p><span class="init">Acceder a la aplicación: </span></p> 
-
-            <p>¡Ya podrás acceder a tu aplicación escribiendo en tu navegador la url <span class="bold">http://localhost:8080/tu-aplicacion</span> 
-                e ingresando tus credenciales!</p>       
+                <span class="code">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
 
 
-        </li>
-        
-    </ol>
+                Copia tu archivo <span class="bold">.war</span> al directorio autodeploy. GlassFish detectará
+                automáticamente la aplicación y la desplegará. <br>
+
+                <span class="code">cp /ruta/a/tu/aplicacion.war .</span> <br>
 
 
 
 
-</section>
+
+            </li>
+            <li>
+
+                <span class="init">Acceso a la Consola de Administración </span> <br>
+
+                Finalmente, abre tu navegador web, visita <span class="bold"> http://localhost:4848 </span> e ingresa
+                tus credenciales <br>
 
 
 
-<section id="Faq">
 
-</section>
+            </li>
+
+        </ol>
+
+
+    </section>
+
+
+
+
+
+
+    <section id="Wildfly">
+
+        <h1> &nbsp Instalación y configuración en WILDFLY SERVER <br>Versión en Windows</h1>
+        <img class="trans imagen-tom" src="./images/wildfly_logo_icon_170787.png" alt="">
+
+
+        <ol class="listatom">
+            <li><span class="init">Descarga de Wildfly server: </span> <br>
+
+                <p>Visita el sitio web oficial de WildFly en https://wildfly.org/downloads/.</p>
+                <p>En la sección de descargas, busca la versión más reciente y haz clic en el enlace de descarga.
+                <p>Selecciona la distribución ZIP para Windows.</p>
+
+            </li>
+
+            <li>
+                <p><span class="init">Configuración: </span></p>
+
+
+
+                <p>Abre el <span class="bold">"Panel de control"</span>en Windows y ve a <span class="bold"> "Sistema y
+                        seguridad" > "Sistema".</span></p> <span class="bold"></span>
+                <p>Haz clic en <span class="bold">"Configuración avanzada del sistema"</span> y luego en <span
+                        class="bold">"Variables de entorno".</span></p>
+                <p>En "Variables del sistema", haz clic en "Nuevo" y agrega una nueva variable llamada JBOSS_HOME con la
+                    ruta de la carpeta donde descomprimiste WildFly (por ejemplo, <span
+                        class="bold">C:\ruta\a\wildfly-xx.xx.xx.Final).</span></p>
+                <p>Encuentra la variable Path en la sección de "Variables del sistema" y haz clic en "Editar". Agrega al
+                    final la siguiente entrada: <span class="bold">%JBOSS_HOME%\bin.</span> </p>
+
+
+            </li>
+            <li>
+                <p><span class="init">Iniciar Wildfly: </span> </p>
+
+                <p> Abre una nueva ventana de terminal (cmd) y navega a la carpeta bin dentro de la carpeta WildFly.</p>
+                <p>Ejecuta el siguiente comando para iniciar WildFly:</p>
+
+                <p> <span class="code">standalone.bat</span> </p>
+
+
+
+
+
+            </li>
+            <li>
+
+                <p><span class="init">Desplegar una aplicación Java: </span></p>
+
+                <p>Crea o copia tu aplicación Java (un archivo WAR) en la carpeta <span
+                        class="bold">standalone/deployments</span> dentro de la carpeta WildFly.</p>
+                <p>WildFly detectará automáticamente la aplicación y la desplegará.</p>
+
+
+            </li>
+            <li>
+
+                <p><span class="init">Acceder a la aplicación: </span></p>
+
+                <p>¡Ya podrás acceder a tu aplicación escribiendo en tu navegador la url <span
+                        class="bold">http://localhost:8080/tu-aplicacion</span>
+                    e ingresando tus credenciales!</p>
+
+
+            </li>
+
+        </ol>
+
+
+
+
+    </section>
+
+
+
+    <section id="faq">
+
+        <h1> FAQ</h1>
+
+        <div class="contenedor">
+            <div class="q q1">¿Cómo desplegar una aplicación Java EE en el servidor?
+                <div class="h oculto1">Después de instalar el servidor, puedes desplegar una aplicación Java EE copiando
+                    el archivo WAR (Web Application Archive) o EAR (Enterprise Archive) en el directorio correspondiente
+                    del servidor. Alternativamente, algunos servidores proporcionan herramientas administrativas o
+                    interfaces web para facilitar el despliegue.</div>
+            </div>
+            <div class="q q2"> ¿Cómo configurar un servidor web para trabajar con Java EE?
+                <div class="h oculto2">En la mayoría de los casos, los servidores de aplicaciones vienen preconfigurados
+                    para trabajar con Java EE. Sin embargo, puedes necesitar ajustar la configuración según tus
+                    necesidades. Asegúrate de configurar correctamente las variables de entorno, como JAVA_HOME, y de
+                    ajustar los archivos de configuración del servidor según sea necesario.</div>
+            </div>
+            <div class="q q3"> ¿Cómo se configuran las fuentes de datos (datasources) en un servidor Java EE?
+                <div class="h oculto3">La configuración de datasources varía según el servidor. Por lo general, deberás
+                    especificar la ubicación de tu base de datos, el nombre de usuario y la contraseña en el archivo de
+                    configuración del servidor. Consulta la documentación del servidor específico para obtener detalles.
+                </div>
+            </div>
+            <div class="q q4"> ¿Cómo gestionar las dependencias de la aplicación en Java EE?
+                <div class="h oculto4">Puedes gestionar las dependencias de la aplicación utilizando herramientas como
+                    Maven o Gradle. Estas herramientas ayudan a gestionar las bibliotecas y a construir archivos de
+                    artefactos (JAR, WAR, EAR) que pueden ser fácilmente desplegados en el servidor de aplicaciones.
+                </div>
+            </div>
+            <div class="q q5">¿Cómo configurar y asegurar un servidor de aplicaciones Java EE?
+                <div class="h oculto5">La configuración y seguridad varían según el servidor, pero generalmente
+                    involucran la configuración de certificados SSL, ajustes de firewall, y la aplicación de prácticas
+                    de seguridad recomendadas. Consulta la documentación de seguridad del servidor específico para
+                    obtener orientación detallada.</div>
+            </div>
+            <div class="q q6">¿Dónde puedo encontrar más recursos para aprender sobre la configuración de servidores
+                Java EE?
+                <div class="h oculto6">Puedes encontrar información adicional en la documentación oficial de los
+                    servidores Java EE, tutoriales en línea, foros de la comunidad y libros especializados en Java EE y
+                    servidores de aplicaciones. Además, la participación en comunidades en línea puede ser útil para
+                    obtener asesoramiento de otros profesionales en el campo.</div>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
 
 
 
 </body>
 
-<footer>
+<footer id="about">
+    <h1> ABOUT ME</h1>
+
+    <div class="footcont">
+        <div class="image_author"></div>
+        <div class="contenido">
+            <div class="description">
+                Desarrollador web versátil, con un enfoque minimalista que fusiona elegancia y funcionalidad.
+                Especializado en crear experiencias digitales intuitivas y visualmente atractivas. Apasionado por el
+                código limpio y las soluciones eficientes. Transformo ideas en interfaces modernas y efectivas.
+            </div>
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/marco-antonio-blanco-lebr%C3%B3n-b76351195/" target="_blank"><div class="linkedin"></div></a>
+                <a href="https://github.com/marblaleb" target="_blank"><div class="github"></div></a>
+
+            </div>
+        </div>
+    </div>
 
 </footer>
 
