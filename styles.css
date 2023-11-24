@@ -1,4 +1,9 @@
 @import url('https://fonts.cdnfonts.com/css/cooper-hewitt');
+@import url('https://fonts.cdnfonts.com/css/socilo');
+@import url('https://fonts.cdnfonts.com/css/fatsansround');
+/* 
+font-family: 'Socilo', sans-serif; */
+
 
 * {
     font-family: 'Cooper Hewitt', sans-serif;
@@ -61,7 +66,7 @@ body {
     width: 10%;
     height: 100%;
 
-    background-image: url(/images/java.gif);
+    background-image: url(./images/java.gif);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,14 +108,7 @@ body {
 }
 
 
-section {
-    /* height: 180vh;
-    width: 100%;
-    margin: 0; */
 
-
-
-}
 
 #index {
 
@@ -120,7 +118,7 @@ section {
     height: 70vh;
 
 
-    background-image: url(/images/image-from-rawpixel-id-6117897-original.png);
+    background-image: url(./images/image-from-rawpixel-id-6117897-original.png);
 
     background-position: center;
     background-repeat: repeat-x;
@@ -132,6 +130,8 @@ section {
     margin-left: 0vw;
     margin-bottom: 15vh;
     margin-right: 0;
+
+   
 
 
     display: flex;
@@ -150,9 +150,10 @@ section {
     font-size: 1.6vw;
     font-weight: 900;
     position: absolute;
+    border-radius: 5px;
     top: 40vh;
     left: 6vw;
-    padding: 0.5vh;
+    padding: 1.5vh;
     background-color: #EEA1D5;
     box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
 
@@ -168,6 +169,7 @@ section {
     position: absolute;
     bottom: -48px;
     right: 15px;
+    
 }
 
 
@@ -181,8 +183,9 @@ section {
     position: absolute;
     top: 68vh;
     left: 19vw;
+    border-radius: 5px;
 
-    padding: 0.5vh;
+    padding: 1.5vh;
     background-color: #EEA1D5;
     box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
 
@@ -210,8 +213,9 @@ section {
     position: absolute;
     top: 40vh;
     left: 45vw;
+    border-radius: 5px;
 
-    padding: 0.5vh;
+    padding: 1.5vh;
     background-color: #c6c4f7;
     box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
 
@@ -240,7 +244,7 @@ section {
     top: 70vh;
     left: 70vw;
 
-    padding: 0.5vh;
+    padding: 1.5vh;
     background-color: #EEA1D5;
     box-shadow: 1px 12px 33px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -270,12 +274,16 @@ section {
 .code {
     font-style: normal;
     font-weight: 900;
-    display: inline-block;
+    display: block;
+    text-align: center;
     background-color: #C6C4F7;
     color: white;
     margin: 1em;
     padding: 1em;
     border-radius: 5em;
+    word-wrap: break-word;
+    letter-spacing: 0.2vw;
+    word-spacing: 0.3vw;
 }
 
 
@@ -292,15 +300,33 @@ section {
 }
 
 .menu2 span {
-    height: 20vh;
-    width: 50px;
+    height: 20vh;;
+    width: 80%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
+    margin-left: 0.5vh;
+   
+  
+   
+    
 
 
 }
+
+.desplegable{
+    
+    
+    background-image: url(./images/icons8-menu-50.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity:0.6;
+    
+}
+
+
 
 .menu2 span a {
     color: #fff;
@@ -308,6 +334,41 @@ section {
     font-size: 18px;
     transform: rotate(270deg);
     text-decoration: none;
+    font-family: 'FatSansRound', sans-serif;
+    visibility: hidden;
+    opacity: 0;
+   
+   
+    
+    
+}
+
+span .hidden{
+    transition: all 1s ease;
+
+}
+
+.menu2{
+    transition: all 1s ease;
+
+}
+
+.menu2:hover >span .hidden{
+    visibility: visible;
+    opacity: 0.6;
+  
+   
+}
+
+.menu2:hover > .desplegable{
+  
+    opacity: 1;
+  
+   
+}
+
+.menu2 span .hidden:hover{
+    opacity:1;
 }
 
 
@@ -340,7 +401,7 @@ section:nth-of-type(2) {
 
 #Tomcat h1 {
     padding-top: 1em;
-    margin-left: 7.5em;
+    margin-left: 18.5vw;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 3em;
@@ -354,8 +415,8 @@ section:nth-of-type(2) {
     font-size: 1.5em;
     word-spacing: 0.2em;
 
-    margin-top: 3em;
-    margin-left: 20em;
+    margin-top: 3vh;
+    margin-left: 25vw;
     counter-increment: name;
 
 }
@@ -395,7 +456,7 @@ section:nth-of-type(2) {
     float: left;
     width: 10vw;
     height: 15vh;
-    margin-left: 10vw;
+    margin-left: 7vw;
     margin-top: 15vh;
     background-color: #C6C4F7;
     border-radius: 0.3em;
@@ -437,7 +498,7 @@ section:nth-of-type(3) {
 
 #Glassfish h1 {
     padding-top: 1em;
-    margin-left: 7.5em;
+    margin-left: 18.5vw;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 3em;
@@ -467,7 +528,7 @@ section:nth-of-type(4) {
 
 #Wildfly h1 {
     padding-top: 1em;
-    margin-left: 7.5em;
+    margin-left: 18.5vw;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 3em;
@@ -505,7 +566,7 @@ section:nth-of-type(5) {
 
 #faq h1 {
     padding-top: 1em;
-    margin-left: 7.5em;
+    margin-left: 18.5vw;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 3em;
@@ -574,7 +635,7 @@ section:nth-of-type(5) {
 
 #about h1 {
     padding-top: 1em;
-    margin-left: 7.5em;
+    margin-left: 18.5vw;
     font-weight: 900;
     text-transform: uppercase;
     font-size: 3em;
@@ -674,4 +735,89 @@ animation: trans 1s linear infinite;
     100% {
         transform: translateY(0vh)
     }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1300px){
+
+    .imagen-tom{
+        display:none;
+    }
+
+}
+
+
+@media (max-width: 800px){
+
+    .menu{
+        display:none;
+    }
+
+    #index{
+        display:none;
+    }
+
+    .image_author{
+        display: none;
+    }
+
+}
+
+
+
+/* CODIGO TERMINAL */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.terminal {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  max-width: 99%;
+  width: 99%;
+  min-height: 200px;
+  margin-top: 25px;
+  background-color: #282828;
+  color: #b4c4c6;
+  padding: 10px;
+  border-radius: 0 0 7px 7px;
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 0 30px 1px rgba(0, 0, 0, 0.2);
+  margin: auto;
+  top: 150px;
+  display: block;
+  margin-top: 3vh;
+  font-size: 1vw;
+}
+.terminal::before {
+  border-radius: 7px 7px 0 0;
+  position: relative;
+  font-size: 0.4vw;
+ 
+  content: attr(data-content);
+  display: block;
+  
+  text-overflow: ellipsis;
+  /* padding: 0 80px; */
+  white-space: nowrap;
+  overflow: hidden;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  color: #4c3436;
+  font-size: 1em;
+  background: linear-gradient(0deg, #d8d8d8, #ececec);
+  top: -25px;
+  left: -10px;
+
+}
+
+.terminal p {
+  margin: 0;
+  
+}
+.terminal p::before {
+  color: #5ed7ff;
+  content: '~$ ';
 }

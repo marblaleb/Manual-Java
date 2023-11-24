@@ -26,10 +26,11 @@
 
     <div class="menu-wrap">
         <div class="menu2">
-            <span><a href="#Tomcat">Tomcat</a></span>
-            <span><a href="#Glassfish">Glassfish</a></span>
-            <span><a href="#Wildfly">Wildfly</a></span>
-            <span><a href="#faq">Faq</a></span>
+            <span class="desplegable"></span>
+            <span><a class="hidden" href="#Tomcat">Tomcat</a></span>
+            <span><a class="hidden" href="#Glassfish">Glassfish</a></span>
+            <span><a class="hidden" href="#Wildfly">Wildfly</a></span>
+            <span><a class="hidden" href="#faq">Faq</a></span>
         </div>
     </div>
 
@@ -65,13 +66,13 @@
                 Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con
                 el siguiente comando: <br>
 
-                <span class="code">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
+                <span class="terminal" data-content="Mi Terminal">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
 
                 <br>
 
                 Mueve la carpeta de Tomcat al directorio deseado: <br>
 
-                <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
+                <span class="terminal" data-content="Mi Terminal">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
 
 
 
@@ -81,12 +82,12 @@
 
                 Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
 
-                <span class="code">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
+                <span class="terminal" data-content="Mi Terminal">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
 
 
                 Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
 
-                <span class="code">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
+                <span class="terminal" data-content="Mi Terminal">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
 
 
 
@@ -99,11 +100,11 @@
 
                 Desde la terminal, ejecuta el siguiente comando: <br>
 
-                <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
+                <span class="terminal" data-content="Mi Terminal">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
 
                 Desde la terminal, ejecuta el siguiente comando: <br>
 
-                <span class="code">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
+                <span class="terminal" data-content="Mi Terminal">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
 
 
             </li>
@@ -132,9 +133,9 @@
                 GlassFish Server.
                 Abre la terminal en Ubuntu y escribe los siguientes comandos: <br>
 
-                <p><span class="code">cd /ruta/a/tu/descarga</span></p>
-                <p><span class="code">unzip nombre_del_archivo.zip</span></p>
-                <p><span class="code">sudo mv glassfish* /opt/glassfish </span></p>
+                <p><span class="terminal" data-content="Mi Terminal">cd /ruta/a/tu/descarga</span></p>
+                <p><span class="terminal" data-content="Mi Terminal">unzip nombre_del_archivo.zip</span></p>
+                <p><span class="terminal" data-content="Mi Terminal">sudo mv glassfish* /opt/glassfish </span></p>
 
 
 
@@ -148,20 +149,20 @@
                 Abre el archivo <span class="bold">.bashrc</span> o <span class="bold">.zshrc</span> en tu editor de
                 texto favorito. <br>
 
-                <span class="code">nano ~/.bashrc </span>
+                <span class="terminal" data-content="Mi Terminal">nano ~/.bashrc </span>
 
                 <br>Agrega las siguientes líneas al final del archivo: <br>
 
-                <span class="code">export GLASSFISH_HOME=/opt/glassfish <br>
+                <span class="terminal" data-content="Mi Terminal">export GLASSFISH_HOME=/opt/glassfish <br>
                     export PATH=$PATH:$GLASSFISH_HOME/bin</span>
 
                 <br>Guarda y cierra el archivo. Luego, recarga el archivo de configuración: <br>
 
-                <span class="code">source ~/.bashrc <br></span>
+                <span class="terminal" data-content="Mi Terminal">source ~/.bashrc <br></span>
 
                 <br> En la terminal, ejecuta el siguiente comando para iniciar GlassFish: <br>
 
-                <span class="code">asadmin start-domain <br></span>
+                <span class="terminal" data-content="Mi Terminal">asadmin start-domain <br></span>
 
 
             </li>
@@ -170,13 +171,13 @@
                 Crea un archivo .war de tu aplicación Java (por ejemplo, mi_aplicacion.war). <br>
                 Navega al directorio <span class="bold">autodeploy</span> de GlassFish: <br>
 
-                <span class="code">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
+                <span class="terminal" data-content="Mi Terminal">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
 
 
                 Copia tu archivo <span class="bold">.war</span> al directorio autodeploy. GlassFish detectará
                 automáticamente la aplicación y la desplegará. <br>
 
-                <span class="code">cp /ruta/a/tu/aplicacion.war .</span> <br>
+                <span class="terminal" data-content="Mi Terminal">cp /ruta/a/tu/aplicacion.war .</span> <br>
 
 
 
@@ -243,7 +244,7 @@
                 <p> Abre una nueva ventana de terminal (cmd) y navega a la carpeta bin dentro de la carpeta WildFly.</p>
                 <p>Ejecuta el siguiente comando para iniciar WildFly:</p>
 
-                <p> <span class="code">standalone.bat</span> </p>
+                <p> <span class="terminal" data-content="Mi Terminal">standalone.bat</span> </p>
 
 
 
