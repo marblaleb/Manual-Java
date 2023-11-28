@@ -271,20 +271,7 @@ body {
     font-weight: 900;
 }
 
-.code {
-    font-style: normal;
-    font-weight: 900;
-    display: block;
-    text-align: center;
-    background-color: #C6C4F7;
-    color: white;
-    margin: 1em;
-    padding: 1em;
-    border-radius: 5em;
-    word-wrap: break-word;
-    letter-spacing: 0.2vw;
-    word-spacing: 0.3vw;
-}
+
 
 
 
@@ -430,6 +417,10 @@ section:nth-of-type(2) {
 
 .listatom li:nth-last-of-type(1) {
     border: none;
+}
+
+#Tomcat p{
+    padding: 2vh;
 }
 
 

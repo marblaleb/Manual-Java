@@ -57,37 +57,39 @@
         <ol class="listatom">
             <li><span class="init">Descarga de Apache Tomcat: </span> <br>
 
-                Visita el sitio oficial de Apache Tomcat en <b>https://tomcat.apache.org/</b> <br>
+                Visita el sitio oficial de Apache Tomcat en <span class="bold">https://tomcat.apache.org/</span> <br>
                 En la sección "Download" elige la versión de Tomcat que desees y descarga el archivo binario (archivo
                 .tar.gz).</li>
             <li>
                 <span class="init">Instalación en Ubuntu: </span><br>
 
-                Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con
-                el siguiente comando: <br>
+                <p> Abre una terminal. Navega al directorio donde descargaste el archivo Tomcat y descomprime el archivo con
+                el siguiente comando: </p>
 
-                <span class="terminal" data-content="Mi Terminal">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
+                <span class="terminal" data-content="ubuntu@miterminal">tar -xvzf apache-tomcat-VERSION.tar.gz </span>
 
-                <br>
+                
 
-                Mueve la carpeta de Tomcat al directorio deseado: <br>
+                <p>Mueve la carpeta de Tomcat al directorio deseado: </p>
 
-                <span class="terminal" data-content="Mi Terminal">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
+                <span class="terminal" data-content="ubuntu@miterminal">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh</span>
 
 
 
 
             </li>
-            <li><span class="init">Configuración: </span> <br>
+            <li><span class="init">Configuración: </span> 
 
-                Abre el archivo de configuración catalina.sh para definir variables de entorno: <br>
+                <p>Abre el archivo de configuración catalina.sh para definir variables de entorno: </p>
 
-                <span class="terminal" data-content="Mi Terminal">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
+                 
 
+                <span class="terminal" data-content="ubuntu@miterminal">sudo nano /opt/apache-tomcat-VERSION/bin/catalina.sh </span> <br>
 
-                Agrega la línea siguiente al principio del archivo para especificar la ruta de Java: <br>
+                
+               <p> Agrega la línea siguiente al principio del archivo para especificar la ruta de Java:</p>
 
-                <span class="terminal" data-content="Mi Terminal">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
+                <span class="terminal" data-content="ubuntu@miterminal">export JAVA_HOME=/usr/lib/jvm/openjdk-VERSION</span> <br>
 
 
 
@@ -98,19 +100,31 @@
 
                 <span class="init">Iniciar Apache Tomcat: </span> <br>
 
-                Desde la terminal, ejecuta el siguiente comando: <br>
+            <p> Desde la terminal, ejecuta el siguiente comando:</p>   
 
-                <span class="terminal" data-content="Mi Terminal">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
+                <span class="terminal" data-content="ubuntu@miterminal">/opt/apache-tomcat-VERSION/bin/startup.sh</span> <br>
 
-                Desde la terminal, ejecuta el siguiente comando: <br>
-
-                <span class="terminal" data-content="Mi Terminal">/opt/apache-tomcat-VERSION/bin/startup.sh</span>
+           
 
 
             </li>
             <li>
-                <span class="init">Abre un navegador web </span>y accede a http://localhost:8080 para el panel de
+                <span class="init">Abre un navegador web </span>y accede a <span class="bold">http://localhost:8080 </span>para el panel de
                 administración de Tomcat. Debes poder ver la página de inicio de Tomcat.
+            </li>
+
+            <li>
+                <span class="init">Desplegar una aplicación JAVA: </span>
+
+                <p>Crea un archivo <span class="bold">WAR (Web Application Archive)</span> de tu aplicación Java. Puedes compilar tu aplicación con herramientas como <span class="bold">Maven o Gradle</span>.</p>
+                <p>Copia el archivo WAR generado en el directorio webapps dentro del directorio de Tomcat.</p>
+                <span class="terminal" data-content="ubuntu@miterminal">cp tu-aplicacion.war $CATALINA_HOME/webapps/</span> 
+                <p>Tomcat  <span class="bold">detectará automáticamente el archivo WAR</span> y desplegará la aplicación.</p>
+                <p>Accede a tu aplicación visitando <span class="bold">http://localhost:8080/nombre-de-tu-aplicacion</span>, donde <span class="bold">nombre-de-tu-aplicacion</span> es el nombre del <span class="bold">archivo WAR </span>sin la extensión.</p>
+                <p>¡Listo! Has instalado, configurado <span class="bold">Apache Tomcat</span> y desplegado una <span class="bold">aplicación Java</span>. Asegúrate de ajustar los comandos y rutas según tu entorno y configuración específica.</p>
+                
+               
+
             </li>
         </ol>
 
@@ -130,12 +144,12 @@
             <li><span class="init">Descarga de Glassfish server: </span> <br>
 
                 Visita el sitio oficial de GlassFish para obtener la última versión, descarga el archivo ZIP del
-                GlassFish Server.
+                <span class="bold">GlassFish Server.</span>
                 Abre la terminal en Ubuntu y escribe los siguientes comandos: <br>
 
-                <p><span class="terminal" data-content="Mi Terminal">cd /ruta/a/tu/descarga</span></p>
-                <p><span class="terminal" data-content="Mi Terminal">unzip nombre_del_archivo.zip</span></p>
-                <p><span class="terminal" data-content="Mi Terminal">sudo mv glassfish* /opt/glassfish </span></p>
+                <p><span class="terminal" data-content="ubuntu@miterminal">cd /ruta/a/tu/descarga</span></p>
+                <p><span class="terminal" data-content="ubuntu@miterminal">unzip nombre_del_archivo.zip</span></p>
+                <p><span class="terminal" data-content="ubuntu@miterminal">sudo mv glassfish* /opt/glassfish </span></p>
 
 
 
@@ -149,20 +163,20 @@
                 Abre el archivo <span class="bold">.bashrc</span> o <span class="bold">.zshrc</span> en tu editor de
                 texto favorito. <br>
 
-                <span class="terminal" data-content="Mi Terminal">nano ~/.bashrc </span>
+                <span class="terminal" data-content="ubuntu@miterminal">nano ~/.bashrc </span>
 
                 <br>Agrega las siguientes líneas al final del archivo: <br>
 
-                <span class="terminal" data-content="Mi Terminal">export GLASSFISH_HOME=/opt/glassfish <br>
+                <span class="terminal" data-content="ubuntu@miterminal">export GLASSFISH_HOME=/opt/glassfish <br>
                     export PATH=$PATH:$GLASSFISH_HOME/bin</span>
 
                 <br>Guarda y cierra el archivo. Luego, recarga el archivo de configuración: <br>
 
-                <span class="terminal" data-content="Mi Terminal">source ~/.bashrc <br></span>
+                <span class="terminal" data-content="ubuntu@miterminal">source ~/.bashrc <br></span>
 
                 <br> En la terminal, ejecuta el siguiente comando para iniciar GlassFish: <br>
 
-                <span class="terminal" data-content="Mi Terminal">asadmin start-domain <br></span>
+                <span class="terminal" data-content="ubuntu@miterminal">asadmin start-domain <br></span>
 
 
             </li>
@@ -171,13 +185,13 @@
                 Crea un archivo .war de tu aplicación Java (por ejemplo, mi_aplicacion.war). <br>
                 Navega al directorio <span class="bold">autodeploy</span> de GlassFish: <br>
 
-                <span class="terminal" data-content="Mi Terminal">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
+                <span class="terminal" data-content="ubuntu@miterminal">cd $GLASSFISH_HOME/glassfish/domains/domain1/autodeploy </span> <br>
 
 
                 Copia tu archivo <span class="bold">.war</span> al directorio autodeploy. GlassFish detectará
                 automáticamente la aplicación y la desplegará. <br>
 
-                <span class="terminal" data-content="Mi Terminal">cp /ruta/a/tu/aplicacion.war .</span> <br>
+                <span class="terminal" data-content="ubuntu@miterminal">cp /ruta/a/tu/aplicacion.war .</span> <br>
 
 
 
@@ -244,7 +258,7 @@
                 <p> Abre una nueva ventana de terminal (cmd) y navega a la carpeta bin dentro de la carpeta WildFly.</p>
                 <p>Ejecuta el siguiente comando para iniciar WildFly:</p>
 
-                <p> <span class="terminal" data-content="Mi Terminal">standalone.bat</span> </p>
+                <p> <span class="terminal" data-content="windows@miterminal">standalone.bat</span> </p>
 
 
 
